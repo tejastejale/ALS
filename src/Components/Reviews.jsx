@@ -4,21 +4,23 @@ import axios from "axios";
 import { baseurl } from "../Helper";
 
 function Reviews() {
-  const [data, setData] = React.useState([])
+  const [data, setData] = React.useState([]);
   function getReviews() {
-    axios.get(baseurl + "/web/customer-reviews/").then((res) => {
-      setData(res.data)
-    })
-      .catch((err) => {
-        console.log(err)
+    axios
+      .get(baseurl + "/web/customer-reviews/")
+      .then((res) => {
+        setData(res.data);
       })
+      .catch((err) => {
+        console.log(err);
+      });
   }
 
   React.useEffect(() => {
-    getReviews()
-  }, [])
+    getReviews();
+  }, []);
   return (
-    <div className="h-full md:w-full bg-green-50 p-0 w-screen">
+    <div className="h-full md:w-full bg-orange-50 p-0 w-screen">
       <p className="text-center font-semibold text-3xl md:text-4xl py-5 md:py-10">
         Good Reviews By Customers
       </p>

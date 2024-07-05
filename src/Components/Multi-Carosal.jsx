@@ -3,6 +3,7 @@ import axios from "axios";
 import React from "react";
 import { baseurl } from "../Helper";
 import { useNavigate } from "react-router-dom";
+import bg from "../images/bg.png";
 
 export default function MultiCoro() {
   const navigate = useNavigate();
@@ -34,13 +35,13 @@ export default function MultiCoro() {
 
   React.useEffect(() => {
     getProperties();
-    getProperty()
+    getProperty();
   }, []);
 
   const PropertyCard = ({ src, title, location, onPress, available_type }) => (
     <div
       onClick={onPress}
-      className="bg-white shadow-md rounded-lg cursor-pointer overflow-hidden"
+      className="bg-white shadow-lg rounded-lg cursor-pointer overflow-hidden"
     >
       <img src={src} alt={title} className="w-[500px] bg-cover h-[200px] " />
       <div className="p-2 md:p-4">
@@ -53,14 +54,17 @@ export default function MultiCoro() {
           ))}
         </div>
         <p className="mt-2 text-xs md:text-sm text-gray-600">{location}</p>
-        <button className="mt-2 md:mt-4 bg-green-500 text-white px-2 md:px-4 py-1 md:py-2 rounded">
+        <button className="mt-2 md:mt-4 bg-orange-400 text-white px-2 md:px-4 py-1 md:py-2 rounded">
           View
         </button>
       </div>
     </div>
   );
   return (
-    <div className="flex flex-col bg-gray-50">
+    <div
+      className="flex flex-col bg-gray-50"
+      style={{ backgroundImage: `url(${bg})`, background: "cover" }}
+    >
       <div className="w-screen flex flex-col justify-between items-center align-middle px-2 md:px-5">
         <div className="text-center mb-4">
           <p className="text-2xl md:text-4xl font-semibold">
@@ -77,22 +81,21 @@ export default function MultiCoro() {
           nextButtonClassName="bg-blue-500 text-white rounded-full w-8 h-8 md:w-10 md:h-10 flex items-center justify-center"
         >
           {/* Mobile view: One card per slide */}
-          {
-            data2?.map((item, index) => (
-              <div className="p-2 md:hidden">
-                <PropertyCard
-                  onPress={() => {
-                    navigate(`/property/${item?.name}`, { state: { item: item } })
-                  }}
-                  available_type={item?.available_type}
-                  src={baseurl + item?.property_images[0].image}
-                  title={item?.name}
-                  location={item?.address}
-                />
-              </div>
-            ))
-          }
-
+          {data2?.map((item, index) => (
+            <div className="p-2 md:hidden">
+              <PropertyCard
+                onPress={() => {
+                  navigate(`/property/${item?.name}`, {
+                    state: { item: item },
+                  });
+                }}
+                available_type={item?.available_type}
+                src={baseurl + item?.property_images[0].image}
+                title={item?.name}
+                location={item?.address}
+              />
+            </div>
+          ))}
         </Carousel>
         <div className="md:contents hidden ">
           <Carousel
@@ -105,25 +108,23 @@ export default function MultiCoro() {
             nextButtonClassName="bg-blue-500 text-white rounded-full w-8 h-8 md:w-10 md:h-10 flex items-center justify-center"
           >
             {/* Desktop view: Three cards per slide */}
-            {
-              data?.map((item, index) => (
-                <div className="hidden md:flex p-4 gap-10">
-                  {
-                    item?.map((item, index) => (
-                      <PropertyCard
-                        onPress={() => {
-                          navigate(`/property/${item?.name}`, { state: { item: item } })
-                        }}
-                        available_type={item?.available_type}
-                        src={baseurl + item?.property_images[0].image}
-                        title={item?.name}
-                        location={item?.address}
-                      />
-                    ))
-                  }
-                </div>
-              ))
-            }
+            {data?.map((item, index) => (
+              <div className="hidden md:flex p-4 gap-10">
+                {item?.map((item, index) => (
+                  <PropertyCard
+                    onPress={() => {
+                      navigate(`/property/${item?.name}`, {
+                        state: { item: item },
+                      });
+                    }}
+                    available_type={item?.available_type}
+                    src={baseurl + item?.property_images[0].image}
+                    title={item?.name}
+                    location={item?.address}
+                  />
+                ))}
+              </div>
+            ))}
           </Carousel>
         </div>
       </div>

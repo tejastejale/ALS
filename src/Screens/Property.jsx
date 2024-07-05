@@ -4,7 +4,7 @@ import axios from "axios";
 import { baseurl } from "../Helper";
 import { useLocation } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
-
+import bg from "../images/bg.png";
 export default function Property() {
   const navigate = useNavigate();
   const state = useLocation();
@@ -33,7 +33,7 @@ export default function Property() {
   }, [state]);
   return (
     <div className="h-full w-full flex flex-col justify-center font-Poppins items-center bg-slate-50">
-      <div className="h-[200px] w-full bg-green-500 text-white px-10 text-4xl font-black tracking-wide flex items-center">
+      <div className="h-[200px] w-full bg-orange-500 text-white px-10 text-4xl font-black tracking-wide flex items-center">
         Property List
       </div>
       <div className=" flex w-full flex-wrap justify-evenly my-8">
@@ -43,6 +43,7 @@ export default function Property() {
               navigate(`/property/${item?.name}`, { state: { item: item } });
             }}
             className="bg-white sm:w-[380px] w-[92%] m-2 shadow-md rounded-lg cursor-pointer overflow-hidden"
+            style={{ backgroundImage: `url(${bg})` }}
           >
             <img
               src={baseurl + item?.property_images[0].image}
@@ -61,7 +62,7 @@ export default function Property() {
               <p className="mt-2 text-xs md:text-sm text-gray-600">
                 {item?.address}
               </p>
-              <button className="mt-2 md:mt-4 bg-green-500 text-white px-2 md:px-4 py-1 md:py-2 rounded">
+              <button className="mt-2 md:mt-4 bg-orange-500 text-white px-2 md:px-4 py-1 md:py-2 rounded">
                 View
               </button>
             </div>

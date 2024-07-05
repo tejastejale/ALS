@@ -67,9 +67,9 @@ export function Nav() {
                 <motion.div className="md:flex md:flex-row md:justify-start md:items-end md:gap-5">
                   <Navbar.Link
                     href="#"
-                    className="text-lg text-black hover:text-green-500 text-center md:w-fit w-full items-center align-middle h-full"
+                    className="text-lg text-black hover:text-orange-400 text-center md:w-fit w-full items-center align-middle h-full"
                   >
-                    <p className="text-lg hover:text-green-500 text-black items-center align-middle h-full">
+                    <p className="text-lg hover:text-orange-400 text-black items-center align-middle h-full">
                       Home
                     </p>
                   </Navbar.Link>
@@ -77,7 +77,7 @@ export function Nav() {
                     href="#/about"
                     className="text-lg text-black text-center md:w-fit w-full items-center align-middle h-full"
                   >
-                    <p className="text-lg hover:text-green-500 text-black">
+                    <p className="text-lg hover:text-orange-400 text-black">
                       About Us
                     </p>
                   </Navbar.Link>
@@ -87,7 +87,7 @@ export function Nav() {
                     className="text-center md:w-fit w-full items-center align-middle h-fit md:h-fit"
                     // onOpenChange={handleDropdownToggle}
                     label={
-                      <p className="text-lg md:py-0 py-2 text-center w-full items-center hover:text-green-500 text-black cursor-pointer">
+                      <p className="text-lg md:py-0 py-2 text-center w-full items-center hover:text-orange-400 text-black cursor-pointer">
                         Residential
                       </p>
                     }
@@ -126,7 +126,7 @@ export function Nav() {
                     className="text-center md:w-fit w-full items-center align-middle h-fit md:h-fit"
                     // onOpenChange={handleDropdownToggle}
                     label={
-                      <p className="text-lg md:py-0 py-2 text-center w-full items-center hover:text-green-500 text-black cursor-pointer">
+                      <p className="text-lg md:py-0 py-2 text-center w-full items-center hover:text-orange-400 text-black cursor-pointer">
                         Commercial
                       </p>
                     }
@@ -165,7 +165,7 @@ export function Nav() {
                     className="text-center md:w-fit w-full items-center align-middle h-fit md:h-fit"
                     // onOpenChange={handleDropdownToggle}
                     label={
-                      <p className="text-lg md:py-0 py-2 text-center w-full items-center hover:text-green-500 text-black cursor-pointer">
+                      <p className="text-lg md:py-0 py-2 text-center w-full items-center hover:text-orange-400 text-black cursor-pointer">
                         Na Plots
                       </p>
                     }
@@ -181,7 +181,7 @@ export function Nav() {
                     href="#/contact-us"
                     className="text-lg text-black items-center align-middle h-full"
                   >
-                    <p className="text-lg hover:text-green-500 text-black text-center md:w-fit w-full items-center align-middle h-full">
+                    <p className="text-lg hover:text-orange-400 text-black text-center md:w-fit w-full items-center align-middle h-full">
                       Contact
                     </p>
                   </Navbar.Link>
@@ -204,7 +204,7 @@ export function Nav() {
                 <Navbar.Collapse className="md:flex md:items-center pr-2">
                   <Navbar.Link
                     href="#"
-                    className="text-lg text-black hover:text-green-500 text-start md:w-auto w-screen items-start align-middle h-full"
+                    className="text-lg text-black hover:text-orange-400 text-start md:w-auto w-screen items-start align-middle h-full"
                   >
                     Home
                   </Navbar.Link>
@@ -220,7 +220,7 @@ export function Nav() {
                       inline={true}
                       className="text-start md:w-fit w-fit overflow-x-hidden justify-start flex items-start align-middle h-fit md:h-fit"
                       label={
-                        <p className="text-lg md:py-0 py-2 text-start w-fit flex items-center px-3 hover:text-green-500 text-black cursor-pointer">
+                        <p className="text-lg md:py-0 py-2 text-start w-fit flex items-center px-3 hover:text-orange-400 text-black cursor-pointer">
                           Residential
                         </p>
                       }
@@ -260,7 +260,7 @@ export function Nav() {
                       inline={true}
                       className="text-start md:w-fit w-fit overflow-x-hidden justify-start flex items-start align-middle h-fit md:h-fit"
                       label={
-                        <p className="text-lg md:py-0 py-2 text-start w-fit flex items-center px-3 hover:text-green-500 text-black cursor-pointer">
+                        <p className="text-lg md:py-0 py-2 text-start w-fit flex items-center px-3 hover:text-orange-400 text-black cursor-pointer">
                           Commercial
                         </p>
                       }
@@ -300,7 +300,7 @@ export function Nav() {
                       inline={true}
                       className="text-start md:w-auto w-fit overflow-x-hidden justify-start flex items-start align-middle h-fit md:h-fit"
                       label={
-                        <p className="text-lg md:py-0 py-2 text-start w-fit items-center px-3 hover:text-green-500 text-black cursor-pointer">
+                        <p className="text-lg md:py-0 py-2 text-start w-fit items-center px-3 hover:text-orange-400 text-black cursor-pointer">
                           Na Plots
                         </p>
                       }

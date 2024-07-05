@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 
 function Banner() {
   return (
-    <div className="bg-green-500 w-full h-full">
-      <div className="py-12 bg-green-500 flex flex-wrap items-center justify-evenly w-full">
+    <div className="bg-orange-500 w-full h-full">
+      <div className="py-12 bg-orange-500 flex flex-wrap items-center justify-evenly w-full">
         <div className="w-8/12">
           <p className="text-4xl text-center md:text-start font-bold text-white">
             Didn't Find What You Are Looking For?

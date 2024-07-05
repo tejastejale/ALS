@@ -60,11 +60,15 @@ export default function Achive() {
     <div className="flex flex-col bg-gray-50">
       <div className="w-screen flex flex-col justify-between items-center align-middle px-5">
         <div className=""></div>
-        <div className="flex w-[90%] lg:w-[78%] flex-col items-center my-16">
+        <div className="flex w-[95%] lg:w-[78%] flex-col items-center my-16">
           <p className="text-4xl font-semibold text-blue-gray-900 text-center">
             Top developers under one roof
           </p>
-          <Marquee gradient={false} className="bg-gray-50 overflow-y-hidden">
+          <Marquee
+            gradient={true}
+            gradientColor="#f9fafb"
+            className="bg-gray-50 overflow-y-hidden"
+          >
             <div className="flex flex-wrap w-full justify-evenly items-center mt-8 bg-gray-50">
               {imageEntries.map(([id, icon]) => (
                 <div

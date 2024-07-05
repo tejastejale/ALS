@@ -63,7 +63,7 @@ export default function Contact() {
         theme="light"
         transition={Flip}
       />
-      <div className="h-[200px] w-full bg-green-500 text-white px-10 text-4xl font-black tracking-wide flex items-center">
+      <div className="h-[200px] w-full bg-orange-500 text-white px-10 text-4xl font-black tracking-wide flex items-center">
         Contact Us
       </div>
       <div className="sm:w-[88%] flex justify-evenly my-10 sm:flex-row flex-col items-start">
@@ -75,7 +75,7 @@ export default function Contact() {
               onChange={(e) => {
                 setData({ ...data, name: e.target.value });
               }}
-              className="font-semibold bg-gray-100 border-none rounded-md    focus:ring-green-500 w-[88%] px-6 py-4 text-lg"
+              className="font-semibold bg-gray-100 border-none rounded-md    focus:ring-orange-500 w-[88%] px-6 py-4 text-lg"
             />
             <input
               placeholder="Your Phone"
@@ -83,7 +83,7 @@ export default function Contact() {
               onChange={(e) => {
                 setData({ ...data, number: e.target.value });
               }}
-              className="font-semibold bg-gray-100   w-[88%] px-6 border-none focus:ring-green-500 rounded-md  py-4 text-lg"
+              className="font-semibold bg-gray-100   w-[88%] px-6 border-none focus:ring-orange-500 rounded-md  py-4 text-lg"
             />
             <input
               placeholder="Your Email"
@@ -91,7 +91,7 @@ export default function Contact() {
               onChange={(e) => {
                 setData({ ...data, email: e.target.value });
               }}
-              className="font-semibold bg-gray-100 w-[88%] px-6 border-none focus:ring-green-500 rounded-md  py-4 text-lg"
+              className="font-semibold bg-gray-100 w-[88%] px-6 border-none focus:ring-orange-500 rounded-md  py-4 text-lg"
             />
             <textarea
               ref={txtarea}
@@ -99,7 +99,7 @@ export default function Contact() {
               onChange={(e) => {
                 setData({ ...data, message: e.target.value });
               }}
-              className="font-semibold bg-gray-100 w-[88%] px-6 border-none focus:ring-green-500 rounded-md  py-4 text-lg"
+              className="font-semibold bg-gray-100 w-[88%] px-6 border-none focus:ring-orange-500 rounded-md  py-4 text-lg"
             />
             <button
               onClick={() => {
@@ -108,7 +108,7 @@ export default function Contact() {
                   sendEnquiry(data);
                 }
               }}
-              className="bg-green-500 w-[88%] py-4 mb-5 font-semibold text-xl text-white"
+              className="bg-orange-500 w-[88%] py-4 mb-5 font-semibold text-xl text-white"
             >
               Send Enquiry
             </button>
@@ -127,8 +127,7 @@ export default function Contact() {
           <h3 className="text-xl font-black">Drop a Mail</h3>
           <p className=" text-base">
             <a href="mailto:info@makemyproperties.co.in">
-              {" "}
-              info@makemyproperties.co.in{" "}
+              info@makemyproperties.co.in
             </a>
           </p>
           <h3 className="text-xl font-black">Call Us</h3>

@@ -6,12 +6,12 @@ import Property from "./Screens/Property";
 import PropertyInfo from "./Screens/PropertyInfo";
 import About from "./Screens/About";
 import Contact from "./Screens/Contact";
-import { ping } from "ldrs";
+import { hourglass } from "ldrs";
 import { Foot } from "./Components/Footer";
 import PropertyLocation from "./Screens/PropertyLocation";
 
 // Register the loader
-ping.register();
+hourglass.register();
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -27,7 +27,7 @@ function App() {
   if (loading) {
     return (
       <div className="flex justify-center items-center min-h-screen bg-gray-100">
-        <l-ping size="100" speed="1" color="green"></l-ping>
+        <l-hourglass size="100" speed="1" color="orange"></l-hourglass>
       </div>
     );
   }
