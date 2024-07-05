@@ -1,7 +1,7 @@
 {
   "name": "property",
   "version": "0.1.0",
-  "homepage": "https://www.makemyproperties.co.in/",
+  "homepage": "https://tejastejale.github.io/ALS/",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.11.4",
